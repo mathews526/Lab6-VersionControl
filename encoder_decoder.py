@@ -12,9 +12,14 @@ def encode(password): # Encodes the passwords
     return encoded_password
 
 
-def decode(password):
-    # TODO: Implement implement decode functionality (Comment can be deleted)
-    pass
+def decode(password):	# Decodes the password
+
+    decoded_password = ''
+
+    for digit in password:
+        decoded_password += str((int(digit) - 3) % 10)
+
+    return decoded_password
 
 
 def print_menu(): # Prints the menu that displays options for the user to select
